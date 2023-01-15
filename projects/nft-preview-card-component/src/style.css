@@ -122,7 +122,7 @@
     gap: 16px;
     align-items: center;
     font-weight: 400;
-    
+
     & img {
       border: 1px solid var(--colour-white);
       border-radius: 50%;
