@@ -1,0 +1,137 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  --font-size: 15px;
+  --ff-primary: 'Lexend Deca', sans-serif;
+  --ff-secondary: 'Big Shoulders Display', cursive;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  background-color: var(--bg-main);
+  color: var(--transparent-white);
+  font-weight: 300;
+}
+
+.component {
+  max-width: 278px;
+  width: 100%;
+  margin: auto;
+
+  @media (min-width: 768px) {
+    max-width: 834px;
+  }
+
+  & ul {
+    display: grid;
+    border-radius: 7px;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  & h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--very-light-gray);
+    font-family: var(--ff-secondary);
+  }
+
+  & li {
+    height: 450px;
+    padding: 42px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    & img {
+      margin-bottom: 36px;
+    }
+
+    & h3 {
+      margin-bottom: 26px;
+    }
+
+    & p {
+      line-height: 1.5;
+      font-size: 12px;
+
+      @media (min-width: 768px) {
+        font-size: 13.8px;
+      }
+    }
+
+    & button {
+      margin-top: auto;
+    }
+  }
+
+  & li:nth-of-type(1) {
+    background-color: var(--bright-orange);
+
+    & button {
+      color: var(--bright-orange);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--very-light-gray);
+      }
+    }
+  }
+
+  & li:nth-of-type(2) {
+    background-color: var(--dark-cyan);
+
+    & button {
+      color: var(--dark-cyan);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--very-light-gray);
+      }
+    }
+  }
+
+  & li:nth-of-type(3) {
+    background-color: var(--very-dark-cyan);
+
+    & button {
+      color: var(--very-dark-cyan);
+
+      &:hover {
+        background-color: transparent;
+        color: var(--very-light-gray);
+      }
+    }
+  }
+
+  & button {
+    background-color: var(--very-light-gray);
+    color: transparent;
+    padding: 14px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 146px;
+    border-radius: 25px;
+    border: 2px solid var(--very-light-gray);
+    transition: all 0.2s ease-in-out;
+  }
+}
+
