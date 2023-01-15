@@ -1,0 +1,43 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(220, 15%, 55%);
+  --light-gray: hsl(212, 45%, 89%);
+  --dark-blue: hsl(218, 44%, 22%);
+}
+
+#app {
+  font-family: 'Outfit', sans-serif;
+  display: grid;
+  place-items: center;
+  background-color: var(--light-gray);
+  color: var(--grayish-blue);
+}
+
+.component {
+  background: var(--white);
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 25px;
+  padding-bottom: 70px;
+  display: grid;
+  gap: 17px;
+  align-items: flex-start;
+
+  & img {
+    max-width: 300px;
+    border-radius: 10px;
+  }
+
+  & h2 {
+    color: var(--dark-blue);
+    font-weight: 700;
+    font-size: 24px;
+  }
+}
