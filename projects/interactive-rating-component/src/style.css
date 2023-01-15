@@ -1,0 +1,107 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsla(216, 12%, 54%, 0.205);
+  --darkBlue: hsl(213, 19%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+}
+
+#app {
+  font-family: "Overpass", sans-serif;
+  background-color: var(--veryDarkBlue);
+  display: grid;
+  place-items: center;
+  color: var(--lightGrey);
+}
+
+.component {
+  background-color: var(--darkBlue);
+  max-width: 400px;
+  padding: 30px;
+  border-radius: 20px;
+  display: grid;
+  gap: 20px;
+
+  &.success {
+    text-align: center;
+    justify-items: center;
+
+    & p:nth-of-type(1) {
+      color: var(--orange);
+      background-color: var(--mediumGrey);
+      padding: 5px 12px;
+      border-radius: 10px;
+    }
+  }
+
+  & h2 {
+    color: var(--white);
+    font-size: 26px;
+    font-weight: 700;
+  }
+
+  & form {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5, 45px);
+    justify-content: space-between;
+    align-items: center;
+
+    & label.circle:hover {
+      background-color: var(--orange);
+      color: var(--white);
+    }
+
+    & [type="radio"]:checked + label {
+      background-color: var(--lightGrey);
+      color: var(--white);
+    }
+
+    & button {
+      width: 100%;
+      grid-column: 1/-1;
+      background-color: var(--orange);
+      color: var(--white);
+      padding: 14px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      border-radius: 20px;
+      font-weight: 700;
+
+      &:hover {
+        background-color: var(--white);
+        color: var(--orange);
+      }
+    }
+  }
+
+  & .circle {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mediumGrey);
+    width: 45px;
+    height: 45px;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    font-weight: 700;
+
+    &:hover {
+      background-color: var(--lightGrey);
+      color: var(--white);
+    }
+
+    &.star {
+      &:hover {
+        background-color: var(--mediumGrey);
+      }
+    }
+  }
+}
