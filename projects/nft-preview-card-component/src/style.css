@@ -1,0 +1,142 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --bg-main: hsl(217, 54%, 11%);
+  --bg-card: hsl(216, 50%, 16%);
+  --colour-blue: hsl(215, 51%, 70%);
+  --colour-cyan: hsl(178, 100%, 50%);
+  --colour-white: hsl(0, 0%, 100%);
+  --line-colour: hsl(215, 32%, 27%);
+
+  --font-size: 18px;
+  --ff-primary: 'Outfit', sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  background-color: var(--bg-main);
+  color: var(--colour-blue);
+  font-weight: 300;
+}
+
+.component {
+  background-color: var(--bg-card);
+  max-width: 350px;
+  width: 100%;
+  margin: auto;
+  border-radius: 15px;
+  padding: 25px 25px 32px;
+  display: grid;
+  gap: 25px;
+
+  & .preview {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 300px;
+    max-height: 300px;
+
+    & .image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+  }
+
+  & .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all 0.25s ease;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+  }
+
+  & .body {
+    display: grid;
+    gap: 15px;
+  }
+
+  & h2 {
+    font-size: 23px;
+    font-weight: 400;
+    color: var(--colour-white);
+
+    & a {
+      color: var(--colour-white);
+      transition: all 0.25s ease;
+
+      &:hover {
+        color: var(--colour-cyan);
+      }
+    }
+  }
+
+  & .text {
+    font-weight: 400;
+  }
+
+  & .info {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+    align-items: center;
+
+    & div {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+
+      &:nth-of-type(1) span {
+        font-weight: 600;
+        color: var(--colour-cyan);
+      }
+    }
+
+    & span {
+      font-weight: 400;
+    }
+  }
+
+  & .creator {
+    border-top: 1px solid var(--line-colour);
+    padding-top: 10px;
+    display: grid;
+    grid-template-columns: 32px max-content;
+    gap: 16px;
+    align-items: center;
+    font-weight: 400;
+    
+    & img {
+      border: 1px solid var(--colour-white);
+      border-radius: 50%;
+    }
+
+    & span {
+      color: var(--colour-white);
+      transition: all 0.25s ease;
+
+      &:hover {
+        cursor: pointer;
+        color: var(--colour-cyan);
+      }
+    }
+  }
+}
+
