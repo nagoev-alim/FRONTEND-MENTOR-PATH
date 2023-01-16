@@ -16,6 +16,7 @@ This is the main repository for all the projects.
 | 09  | [**Stats preview card component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/stats-preview-card-component/src)    | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/stats-preview-card-component/dist/index.html)    |
 | 10  | [**Social proof section**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/social-proof-section/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/social-proof-section/dist/index.html)    |
 | 11  | [**Article preview component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/article-preview-component/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/article-preview-component/dist/index.html)    |
+| 12  | [**Four card feature section**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/four-card-feature-section/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/four-card-feature-section/dist/index.html)    |
 
 -----
 #### 🙌 Author: [@nagoev-alim](https://github.com/nagoev-alim)

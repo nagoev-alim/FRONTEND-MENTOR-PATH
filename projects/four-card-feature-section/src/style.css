@@ -1,0 +1,142 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --maximumViewportWidth: 1440;
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+
+  --font-size: 15px;
+  --font-weight: 400;
+  --line-height: 1.5;
+  --ff-primary: "Poppins", sans-serif;
+}
+
+#app {
+  font-family: var(--ff-primary);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 13px;
+}
+
+.section {
+  display: grid;
+  gap: 75px;
+  text-align: center;
+  max-width: 1440px;
+  width: 100%;
+  margin: auto;
+}
+
+.header {
+  max-width: 465px;
+  margin: auto;
+  display: grid;
+  gap: 10px;
+
+  & p {
+    color: var(--grayish-blue);
+    font-size: 15px;
+  }
+}
+
+h2 {
+  display: grid;
+  font-size: 25px;
+  font-weight: 200;
+
+  & span:nth-of-type(2) {
+    color: var(--very-dark-blue);
+    font-weight: 700;
+  }
+}
+
+ul {
+  display: grid;
+  gap: 30px;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+li {
+  text-align: left;
+  border-radius: 5px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 20px 5px #dedede;
+  border-top: 5px solid var(--cyan);
+  min-height: 198px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &:nth-of-type(2) {
+    border-color: var(--red);
+  }
+
+  &:nth-of-type(3) {
+    border-color: var(--orange);
+  }
+
+  &:nth-of-type(4) {
+    border-color: var(--blue);
+  }
+
+  & h3 {
+    font-size: 20px;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+  }
+
+  & p {
+    font-size: 13px;
+    color: var(--grayish-blue);
+    margin-bottom: 30px;
+  }
+
+  & img {
+    margin-top: auto;
+    margin-left: auto;
+  }
+}
+
+
+@media (min-width: 992px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "start middle1 end"
+        "start middle2 end";
+  }
+
+  li:nth-of-type(1) {
+    grid-area: start;
+    align-self: center;
+  }
+
+  li:nth-of-type(2) {
+    grid-area: middle1;
+  }
+
+  li:nth-of-type(3) {
+    grid-area: middle2;
+  }
+
+  li:nth-of-type(4) {
+    grid-area: end;
+    align-self: center;
+  }
+}
