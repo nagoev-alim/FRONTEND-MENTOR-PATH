@@ -1,0 +1,161 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap');
+
+:root {
+  --clr-gradient-violet: hsl(273, 75%, 66%);
+  --clr-gradient-blue: hsl(240, 73%, 65%);
+  --clr-primary-blue: hsl(238, 29%, 16%);
+  --clr-primary-red: hsl(14, 88%, 65%);
+  --clr-neutral-gray-200: hsl(240, 5%, 91%);
+  --clr-neutral-gray-600: hsl(240, 6%, 50%);
+  --clr-neutral-gray-800: hsl(237, 12%, 33%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-main: 'Kumbh Sans', sans-serif;
+
+  --font-size: 13px;
+  --ff-primary: 'Kumbh Sans', sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  color: var(--transparent-white);
+  background: linear-gradient(var(--clr-gradient-violet) 13%, var(--clr-gradient-blue));
+  font-weight: 400;
+
+  @media (min-width: 768px) {
+    --font-size: 14px;
+  }
+}
+
+.component {
+  width: 100%;
+  margin: auto;
+  border-radius: 24px;
+  position: relative;
+  min-height: 480px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  background: var(--clr-white) url('../assets/images/bg-pattern-mobile.svg') no-repeat top;
+
+  @media (min-width: 768px) {
+    max-width: 925px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url('../assets/images/bg-pattern-desktop.svg') no-repeat -540px -260px,
+    url('../assets/images/imageD.svg') no-repeat -50px 80px;
+    background-color: var(--clr-white);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 268px;
+    height: 180px;
+    top: 0;
+    left: 50%;
+    transform: translate(-55%, -55%);
+    background: url('../assets/images/image.svg') no-repeat center/contain;
+
+    @media (min-width: 768px) {
+      width: 140px;
+      height: 190px;
+      background: url('../assets/images/box.svg') no-repeat;
+      top: 66%;
+      left: -1.6%;
+      transform: translate(-55%, -55%);
+      animation: boxHop 2s ease-in-out;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  & h2 {
+    font-size: 30px;
+    color: var(--clr-primary-blue);
+    font-weight: 700;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: 33px;
+    }
+  }
+
+  & .content {
+    display: grid;
+    gap: 10px;
+    padding: 28px;
+    padding-bottom: 48px;
+    margin-top: 120px;
+
+    @media (min-width: 768px) {
+      grid-column: 2/-1;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      padding: 72px 80px 48px 24px;
+    }
+  }
+
+
+  & li {
+    overflow: hidden;
+    border-bottom: 1px solid var(--clr-neutral-gray-200);;
+
+    &.open {
+      & button {
+        color: var(--clr-primary-blue);
+        font-weight: 700;
+      }
+
+      & img {
+        rotate: 180deg;
+        transform-origin: center;
+      }
+    }
+
+    & [data-header] {
+      & img {
+        pointer-events: none;
+        transition: all 0.25s ease;
+      }
+    }
+
+    & button {
+      min-height: 47px;
+      width: 100%;
+      gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+
+      &:hover {
+        color: var(--clr-primary-red);
+      }
+    }
+
+    & [data-body] {
+      height: 0;
+      transition: all 0.25s linear;
+    }
+  }
+}
+
+@keyframes boxHop {
+  from {
+    transform: translate(-55%, -55%);
+  }
+  50% {
+    transform: translate(-55%, -57.5%);
+  }
+  to {
+    transform: translate(-55%, -55%);
+  }
+}
