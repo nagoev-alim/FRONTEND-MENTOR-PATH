@@ -1,0 +1,140 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca');
+
+:root {
+  --maximumViewportWidth: 1440;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-prim-dark-blue: hsl(233, 47%, 7%);
+  --clr-prim-sat-blue: hsl(244, 38%, 16%);
+  --clr-prim-violet: hsl(277, 64%, 61%);
+  --clr-neu-trans-white: hsla(0, 0%, 100%, 0.75);
+  --clr-neu-more-trans-white: hsla(0, 0%, 100%, 0.6);
+  --clr-bg-violet: hsl(277deg, 100%, 50%, 0.42);
+  --clr-bg-light-violet: hsl(293deg, 42%, 35%, 0.24);
+
+  --font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+  --font-weight: 400;
+  --line-height: 1.25;
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Lexend Deca", sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+
+  background-color: var(--clr-prim-dark-blue);
+  color: var(--clr-neu-trans-white);
+}
+
+.component {
+  width: 100%;
+  margin: auto;
+  max-width: 300px;
+  background-color: var(--clr-prim-sat-blue);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 1px 15px 25px rgb(0 0 0 / 7%);
+  overflow: hidden;
+
+  @media (min-width: 768px) {
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: minmax(250px, 570px) minmax(250px, 540px);
+    align-items: center;
+  }
+}
+
+.image {
+  position: relative;
+  height: 220px;
+
+  @media (min-width: 768px) {
+    height: 100%;
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--clr-bg-violet);
+  }
+}
+
+.content {
+  padding: 35px;
+  text-align: center;
+  display: grid;
+  gap: 25px;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 87px;
+    padding-right: 100px;
+  }
+}
+
+h2 {
+  font-size: calc(27px + (33 - 27) * ((100vw - 300px) / (var(--maximumViewportWidth) - 300)));
+  color: var(--clr-white);
+  font-weight: 700;
+
+  & span {
+    color: var(--clr-prim-violet);
+  }
+}
+
+p {
+  line-height: 1.3;
+}
+
+ul {
+  display: grid;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  & p:nth-of-type(1) {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--clr-white);
+    margin-bottom: 4px;
+  }
+
+  & p:nth-of-type(2) {
+    font-family: var(--ff-secondary);
+    text-transform: uppercase;
+  }
+}
+
+
