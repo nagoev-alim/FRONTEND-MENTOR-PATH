@@ -11,6 +11,7 @@ This is the main repository for all the projects.
 | 04  | [**NFT preview card component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/nft-preview-card-component/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/nft-preview-card-component/dist/index.html)    |
 | 05  | [**3-column preview card componen**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/3-column-preview-card-component/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/3-column-preview-card-component/dist/index.html)    |
 | 06  | [**FAQ accordion card**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/faq-accordion-card/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/faq-accordion-card/dist/index.html)    |
+| 07  | [**Order summary card**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/order-summary-component/src)     | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/order-summary-component/dist/index.html)    |
 
 -----
 #### 🙌 Author: [@nagoev-alim](https://github.com/nagoev-alim)
