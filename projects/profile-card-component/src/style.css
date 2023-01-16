@@ -1,0 +1,97 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --maximumViewportWidth: 1440;
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+
+  --font-size: 18px;
+  --font-weight: 400;
+  --line-height: 1.5;
+  --ff-primary: 'Kumbh Sans', sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+
+  color: var(--dark-grayish-blue);
+  background: url('../assets/images/bg-pattern-bottom.svg') bottom -600px right -150px no-repeat,
+  url('../assets/images/bg-pattern-top.svg') top -500px left -200px no-repeat;
+  background-color: var(--clr-dark-cyan);
+}
+
+.component {
+  width: 100%;
+  margin: auto;
+  max-width: 400px;
+  background-color: var(--clr-white);
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 1px 15px 25px rgb(0 0 0 / 7%);
+  overflow: hidden;
+}
+
+.header {
+  height: 160px;
+  background: url('../assets/images/bg-pattern-card.svg') no-repeat center/cover;
+}
+
+.body {
+  position: relative;
+  padding-top: 80px;
+  display: grid;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 7px solid var(--clr-white);
+  }
+
+  & .name {
+    font-weight: 700;
+    color: var(--very-dark-blue);
+    font-size: 24px;
+
+    & span {
+      font-weight: 400;
+    }
+  }
+
+  & ul {
+    margin-top: 30px;
+    border-top: 2px solid #d8d9df;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 25px;
+
+    & li {
+      display: grid;
+    }
+
+    & p:nth-of-type(1) {
+      font-weight: 700;
+      color: var(--very-dark-blue);
+      font-size: 20px;
+    }
+
+    & p:nth-of-type(2) {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+  }
+}
