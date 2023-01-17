@@ -1,0 +1,123 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --maximumViewportWidth: 1440;
+  --clr-white: hsl(0, 0%, 100%);
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+
+  --font-size: 16px;
+  --font-weight: 400;
+  --line-height: 1.5;
+  --ff-primary: "Poppins", sans-serif;
+}
+
+#app {
+  font-family: var(--ff-primary);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  font-size: var(--font-size);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: var(--grayish-blue);
+  background: var(--red) url('../assets/images/bg-intro-mobile.png') repeat center;
+
+  @media (min-width: 768px) {
+    background-image: url('../assets/images/bg-intro-desktop.png');
+  }
+}
+
+.intro {
+  max-width: 568px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  gap: 48px;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(300px, 492px));
+    justify-content: space-between;
+    gap: 16px;
+    max-width: 1000px;
+    align-items: center;
+  }
+}
+
+.header {
+  display: grid;
+  text-align: center;
+  gap: 21px;
+  color: var(--clr-white);
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+
+  & h1 {
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+
+form {
+  display: grid;
+  gap: 10px;
+  background-color: var(--clr-white);
+  padding: 24px;
+  box-shadow: 0 0.45em 0 0 var(--red);
+  border-radius: 8px;
+
+  & button {
+    padding: 16.5px 10px;
+    background-color: var(--green);
+    color: var(--clr-white);
+    width: 100%;
+    box-shadow: 0 0.3em 0 0 var(--green);
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+.signup {
+  display: grid;
+  gap: 15px;
+
+  & .price {
+    background-color: var(--blue);
+    color: var(--clr-white);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    padding: 16.5px 10px;
+  }
+
+  & input {
+    border: 1px solid var(--grayish-blue);
+    font-weight: 900;
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    color: var(--dark-blue);
+  }
+
+  & .terms {
+    font-size: 12px;
+    text-align: center;
+
+    & span {
+      font-weight: 600;
+      color: var(--red);
+    }
+  }
+}
