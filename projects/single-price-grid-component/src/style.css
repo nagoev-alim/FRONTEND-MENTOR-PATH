@@ -1,0 +1,118 @@
+@import "css/base/reset.css";
+@import "css/base/utils.css";
+@import "css/base/global.css";
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+
+
+  --font-size: 16px;
+  --ff-primary: 'Karla', sans-serif;
+}
+
+#app {
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  font-size: var(--font-size);
+  font-family: var(--ff-primary);
+  background-color: var(--light-gray);
+  color: var(--grayish-blue);
+}
+
+.component {
+  max-width: 520px;
+  width: 100%;
+  margin-inline: auto;
+  border-radius: 6px;
+  overflow: hidden;
+  display: grid;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.column {
+  display: grid;
+  padding: 30px;
+}
+
+h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.top {
+  padding: 30px;
+  background-color: var(--white);
+  gap: 10px;
+
+  @media (min-width: 576px) {
+    grid-column: 1/-1;
+  }
+
+  & h1 {
+    color: var(--cyan);
+    font-weight: 700;
+    font-size: 19px;
+  }
+
+  & p:nth-of-type(1) {
+    color: var(--bright-yellow);
+    font-weight: 700;
+  }
+}
+
+.middle {
+  background-color: hsl(179, 62%, 40%);
+  gap: 8px;
+
+  & h3 {
+  }
+
+  & p:nth-of-type(1) {
+    font-size: 25px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
+
+    & span {
+      font-size: 13px;
+      font-weight: 400;
+      color: hsl(204, 43%, 93%, 0.4);
+    }
+  }
+
+  & p:nth-of-type(2) {
+    color: var(--light-gray);
+    font-size: 13px;
+  }
+
+  & button {
+    background-color: var(--bright-yellow);
+    color: var(--white);
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px hsl(0deg 0% 43% / 28%);
+  }
+}
+
+.bottom {
+  background-color: var(--cyan);
+  color: var(--light-gray);
+  gap: 8px;
+
+  & ul {
+    font-size: 11px;
+  }
+}
