@@ -19,7 +19,8 @@ This is the main repository for all the projects.
 | 12  | [**Four card feature section**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/four-card-feature-section/src)                    | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/four-card-feature-section/dist/index.html)    |
 | 13  | TODO [**Intro component with sign up form**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/intro-component-with-signup-form/src) | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/intro-component-with-signup-form/dist/index.html)    |
 | 14  | [**News homepage**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/news-homepage/src)                          | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/news-homepage/dist/index.html)    |
-| 15  | [**Single price grid component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/single-price-grid-component/src)                          | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/single-price-grid-component/dist/index.html)    |
+| 15  | [**Single price grid component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/single-price-grid-component/src)                         | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/single-price-grid-component/dist/index.html)    |
+| 16  | [**Expenses chart component**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/expenses-chart-component/src)                          | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/expenses-chart-component/dist/index.html)    |
 
 -----
 #### 🙌 Author: [@nagoev-alim](https://github.com/nagoev-alim)
