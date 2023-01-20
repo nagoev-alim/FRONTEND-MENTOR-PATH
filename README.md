@@ -25,6 +25,7 @@ This is the main repository for all the projects.
 | 18  | [**Suite landing page**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/suite-landing-page/src)                             | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/suite-landing-page/dist/index.html)    |
 | 19  | TODO [**Fylo dark theme landing page**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/fylo-dark-theme-landing-page/src)    | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/fylo-dark-theme-landing-page/dist/index.html)    |
 | 20  | [**Advice generator app**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/advice-generator-app/src)          | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/advice-generator-app/dist/index.html)    |
+| 21  | [**GitHub user search app**](https://github.com/nagoev-alim/npp-frontend-mentor/tree/master/projects/github-user-search-app/src)          | [**Live  Demo**](https://npp-frontend-mentor.vercel.app/projects/github-user-search-app/dist/index.html)    |
 
 -----
 #### 🙌 Author: [@nagoev-alim](https://github.com/nagoev-alim)
